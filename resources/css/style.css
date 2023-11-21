@@ -220,7 +220,8 @@ video {
 .social-container img {
     width: 50px;
     height: auto;
-    margin-right: 15px;
+    margin-right: 7.5px;
+    margin-left: 7.5px;
 }
 
 .section-title {
@@ -317,6 +318,12 @@ video {
 
     .contact-title {
         text-align: center;
+    }
+
+    .social-container {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 }
 
