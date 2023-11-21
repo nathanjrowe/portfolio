@@ -11,6 +11,21 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="resources\css\style.css">
+
+        <script>
+           document.addEventListener('DOMContentLoaded', function() {
+                var videos = document.querySelectorAll('.hover-video');
+                videos.forEach(function(video) {
+                    video.addEventListener('mouseover', function() {
+                        this.play();
+                    });
+
+                    video.addEventListener('mouseout', function() {
+                        this.pause();
+                    });
+                });
+            });
+        </script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -41,68 +56,76 @@
             <h3>Languages I've Used</h3>
             <div class="skill-container">
                 <div class="skill-box">
-                    <img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/html-css.png" alt="HTML & CSS">
+                    <img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/html-css.png" title="HTML and CSS" alt="HTML and CSS"/>
                 </div>
                 <div class="skill-box">
-                    <img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/java.png" alt="Java">
+                    <img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/java.png" title="Java" alt="Java"/>
                 </div>
                 <div class="skill-box">
-                    <img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/C.png" alt="C">
+                    <img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/C.png" title="C" alt="C"/>
                 </div>
                 <div class="skill-box">
-                    <img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/matlab.png" alt="Matlab">
+                    <img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/matlab.png" title="Matlab" alt="Matlab"/>
                 </div>
                 <div class="skill-box">
-                    <img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/python.png" alt="Python">
+                    <img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/python.png" title="Python" alt="Python"/>
                 </div>
                 <div class="skill-box">
-                    <img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/haskell.png" alt="Haskell">
+                    <img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/haskell.png" title="Haskell" alt="Haskell"/>
                 </div>
             </div>
         </div>
+        <div id="projects">
         <h2>Projects</h2>
-            <h3>Recent Work</h3>
             <div class="project-container">
                 <div class="project-box">
-                    <img src="" alt="Centipede">
-                    <span class="title">Endless Centipede - Live Game Practice (October 2023)</span>
+                    <video muted loop class="hover-video">
+                        <source src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/videos/Centipede+2023-11-21+01-04-22.mp4">
+                    </video>
+                    <span class="title">Endless Centipede - Live Game Practice</span>
+                    <span class="date">October 2023</span>
                     <span class="description">A game I made in Java using JavaFX. It is a clone of the classic arcade game Centipede.</span>
                     <a href="">View the repository</a>
                 </div>
                 <div class="project-box">
-                    <img src="" alt="Hexapawn">
-                    <span class="title">Hexapawn - Reinforced Learning (September 2023)</span>
+                    <video muted loop class="hover-video">
+                        <source src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/videos/HER.mp4">
+                    </video>
+                    <span class="title">Hexapawn - Reinforced Learning</span>
+                    <span class="date">September 2023</span>
                     <span class="description">Made with Java and JavaFX. Uses Reinforced Learning to eventually play a perfect game.</span>
                     <a href="">View the repository</a>
                 </div>
                 <div class="project-box">
-                    <img src="" alt="Project 3">
-                    <span class="title">Multiplication Circle - JavaFX Animation (August 2023)</span>
+                    <video muted loop class="hover-video">
+                        <source src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/videos/header-background.mp4">
+                    </video>
+                    <span class="title">Multiplication Circle - JavaFX Animation</span>
+                    <span class="date">August 2023</span>
                     <span class="description">A simple animation made with Java and JavaFX. Visualizes multiplication patterns given user input.</span>
                     <a href="">View the repository</a>
                 </div>
-            </div>
-            <h3>Past Work</h3>
-            <div class="project-container">
                 <div class="project-box">
-                    <img src="" alt="DeMolay Website">
+                    <img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/demolay-site.PNG" alt="DeMolay Website">
                     <span class="title">NM DeMolay Web Design - Bootstrap Framework</span>
+                    <span class="date">November 2022</span>
                     <span class="description">A website I made for my DeMolay State Association. It is made with HTML, CSS, and the Bootstrap framework.</span>
                     <a href="">Go to the website</a>
                 </div>
-                <div class="project-box">
-                    <img src="" alt="Project 2">
-                    <span>Project 2</span>
-                </div>
-                <div class="project-box">
-                    <img src="" alt="Project 3">
-                    <span>Project 3</span>
-                </div>
+                
             </div>
+        </div>
         </div>
         <div id="contact">
             <h3>Contact Me</h3>
-        </div>
-        <script src="" async defer></script>
+            <div class="contact-info">
+                <a href="mailto:naterowe2002@gmail.com">Email: naterowe2002@gmail.com</a>
+                <a href="tel:505-573-5160">Phone: 505-573-5160</a>
+            </div>
+            <div class="social-container">
+                <a href="https://www.linkedin.com/in/nathan-james-rowe-4649b11b1/"><img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/linkdIn.png" alt="LinkedIn"></a>
+                <a href="https://github.com/BetaNate"><img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/github.svg" alt="GitHub"></a>
+            </div>
+
     </body>
 </html>

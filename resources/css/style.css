@@ -102,22 +102,35 @@ html, body {
 
 .project-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 .project-box {
     display: flex;
+   
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    margin: 20px;
+    padding: 20px 5px 20px 5px;
+    margin: 20px 5px 20px 5px;
+    width: 20%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.project-box .title, .date{
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.project-box span {
+    text-align: center;
+}
+
+.project-box img, video {
+    width: 100%;
+    height: auto;
     border-radius: 5px;
-    width: 300px;
-    height: 300px;
+    margin-bottom: 15px;
 }
 
 .skill-container {
@@ -138,7 +151,16 @@ html, body {
     border-radius: 5px;
 }
 
-
+video {
+    position: relative;
+    right: 0; 
+    left: 0;
+    min-height: auto;
+    width: 100%; 
+    height: 100%; 
+    background-size:cover;
+    align-items: center;
+}
 
 /* Set media query to change about me display for larger screens*/
 @media screen and (min-width: 600px) {
@@ -156,6 +178,11 @@ html, body {
     
     .skill-box img {
         width: 100px;
+        height: auto;
+    }
+
+    .project-box img {
+        width: 100%;
         height: auto;
     }
 
@@ -177,7 +204,7 @@ html, body {
     #about-me {
         flex-direction: column;
         padding: 5rem 0rem 5rem 0rem;
-        background-color: #f5d9ab;
+        background-color: inherit;
     }
     #about-me p{
         text-align: center;
