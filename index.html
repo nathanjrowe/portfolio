@@ -12,6 +12,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="resources\css\style.css">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Roboto+Condensed:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
         <script>
            document.addEventListener('DOMContentLoaded', function() {
                 var videos = document.querySelectorAll('.hover-video');
@@ -33,12 +37,12 @@
         <![endif]-->
         
         <div id="header">
-            <h1 id="name">Portfolio - Nathan Rowe</h1>
+            <h1 id="name">Portfolio: Nathan Rowe</h1>
             <ul id="nav">
                 <li><a href="#about-me">About Me</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
         <div id="about-me">
@@ -53,7 +57,7 @@
             </p>
         </div>
         <div id="skills">
-            <h3>Languages I've Used</h3>
+            <h2 class="section-title">Languages I've Used</h2>
             <div class="skill-container">
                 <div class="skill-box">
                     <img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/html-css.png" title="HTML and CSS" alt="HTML and CSS"/>
@@ -76,7 +80,7 @@
             </div>
         </div>
         <div id="projects">
-        <h2>Projects</h2>
+        <h2 class="section-title">Projects</h2>
             <div class="project-container">
                 <div class="project-box">
                     <video muted loop class="hover-video">
@@ -117,15 +121,17 @@
         </div>
         </div>
         <div id="contact">
-            <h3>Contact Me</h3>
+            <h2 class="section-title contact-title">Contact Me</h2>
+            <div class="contact-container">
             <div class="contact-info">
                 <a href="mailto:naterowe2002@gmail.com">Email: naterowe2002@gmail.com</a>
                 <a href="tel:505-573-5160">Phone: 505-573-5160</a>
             </div>
             <div class="social-container">
-                <a href="https://www.linkedin.com/in/nathan-james-rowe-4649b11b1/"><img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/linkdIn.png" alt="LinkedIn"></a>
-                <a href="https://github.com/BetaNate"><img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/github.svg" alt="GitHub"></a>
+                <a target="_blank" href="https://www.linkedin.com/in/nathan-james-rowe-4649b11b1/"><img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/linkdIn.png" alt="LinkedIn"></a>
+                <a target="_blank" href="https://github.com/BetaNate"><img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/github.svg" alt="GitHub"></a>
             </div>
-
+            </div>
+        </div>
     </body>
 </html>

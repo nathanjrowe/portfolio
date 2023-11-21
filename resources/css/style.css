@@ -1,7 +1,7 @@
 html, body {
     background-color: rgb(22, 22, 22);
     color: #b68537;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-weight: 200;
     height: 100vh;
     margin: 0;
@@ -12,19 +12,6 @@ html, body {
 *               HEADER 
 *-------------------------------------
 */
-@media screen and (max-width: 600px) {
-    #header {
-        flex-direction: column;
-    }
-    #header h1 {
-        font-size: 0.8em;
-        margin-bottom: 0;
-    }
-    #header li {
-        font-size: 0.6em;
-        margin-top: 0;
-    }
-}
 
 #header {
     display: flex;
@@ -40,7 +27,17 @@ html, body {
 
 #header h1 {
     margin: 0;
+    font-family: 'Caveat', cursive;
+    font-size: 1.3em;
 }
+
+@media screen and (max-width: 600px) {
+    #header {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
 /* 
 *-------------------------------------
@@ -70,6 +67,11 @@ html, body {
     color: #ffb338;
 }
 
+@media screen and (max-width: 600px) {
+    #nav {
+        display: none;
+    }
+}
 /*
 *-------------------------------------
 *             CONTENT
@@ -133,10 +135,22 @@ html, body {
     margin-bottom: 15px;
 }
 
+.project-box a {
+    color: #b68537;
+    text-decoration: none;
+    margin: 20px;
+    border: 1px solid #b68537;
+    border-radius: 5px;
+    padding: 5px;
+}
+.project-box a:hover {
+    color: #ffb338;
+    border: 1px solid #ffb338;
+}
+
 .skill-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -160,6 +174,65 @@ video {
     height: 100%; 
     background-size:cover;
     align-items: center;
+}
+
+/*
+*-------------------------------------
+*             CONTACT
+*-------------------------------------
+*/
+
+#contact {
+    background-color: black;
+    padding: 2rem 0rem 2rem 0rem;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+   
+    border-radius: 5px;
+}
+
+.contact-info a {
+    color: #b68537;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: right;
+    width: 50%;
+}
+
+.social-container img {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.section-title {
+    font-size: 1.6em;
+    font-weight: 600;
+    margin: 10px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.contact-title {
+    text-align: left;
 }
 
 /* Set media query to change about me display for larger screens*/
@@ -226,6 +299,24 @@ video {
 
     #video-background {
         display: none;
+    }
+
+    .project-box {
+        width: 100%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-title {
+        text-align: center;
     }
 }
 
