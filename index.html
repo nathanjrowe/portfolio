@@ -17,41 +17,44 @@
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Roboto+Condensed:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 
         <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const videos = document.querySelectorAll('.hover-video');
 
-            document.addEventListener('DOMContentLoaded', function() {
-                var videos = document.querySelectorAll('.hover-video');
+  // Function to detect if the device is a mobile device
+  function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+  }
 
-                // Function to detect if the device is a mobile device
-                function isMobileDevice() {
-                    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-                };
+  if (isMobileDevice()) {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.play();
+        } else {
+          entry.target.pause();
+        }
+      });
+    });
 
-                if (isMobileDevice()) {
-                    var observer = new IntersectionObserver(function(entries) {
-                        entries.forEach(function(entry) {
-                            if (entry.isIntersecting) {
-                                entry.target.play();
-                            } else {
-                                entry.target.pause();
-                            }
-                        });
-                    });
+    videos.forEach(function(video) {
+      observer.observe(video);
+    });
+  } else {
+    videos.forEach(function(video) {
+      video.closest('.project-box').addEventListener('mouseenter', function() {
+        requestAnimationFrame(function() {
+          video.play();
+        });
+      });
 
-                    videos.forEach(function(video) {
-                        observer.observe(video);
-                    });
-                } else {
-                    videos.forEach(function(video) {
-                        video.addEventListener('mouseover', function() {
-                            this.play();
-                        });
-
-                        video.addEventListener('mouseout', function() {
-                            this.pause();
-                        });
-                    });
-                }
-            });
+      video.closest('.project-box').addEventListener('mouseleave', function() {
+        requestAnimationFrame(function() {
+          video.pause();
+        });
+      });
+    });
+  }
+});
         </script>
     </head>
     <body>
@@ -75,8 +78,7 @@
             <img class="profile-pic" src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/profile-pic.jpg" alt="Profile Picture">
             <p>
                 I am an undergraduate excited in pursuing my Bachelor's in Computer Science.<br>
-                Though I am still in the early stages of my career, I have a passion for learning and developing my skills.<br>
-                Currently looking for an internship to gain experience and insight into different areas of the industry.
+                Passionate in developing my skills through the pursuit of multiple pathways.<br>
             </p>
         </div>
         <div id="skills">
@@ -106,6 +108,19 @@
         <h2 class="section-title">Projects</h2>
             <div class="project-container">
                 <div class="project-box">
+                    <img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/haiku-thumbnail.png" alt="Haiku Finder">
+                    <span class="title">Haiku Finder</span>
+                    <span class="date">June 2024</span>
+                    <span class="description">Uses JS to try and create a haiku from user inputted text. Check out the project <a href="https://nathanjrowe.github.io/haiku-generator-js/">HERE</a></span>
+                    <a class="repo" target="_blank" href="https://github.com/nathanjrowe/haiku-generator-js">View the repository</a>
+                </div>
+                <div class="project-box">
+                    <span class="title no-image">3D Traffic Simulator</span>
+                    <span class="date">March-April 2024</span>
+                    <span class="description">A 3D-rendered simulation of traffic light control of a small section of a city grid using the JavaFX library that I helped co-develop.</span>
+                    <a class="repo" target="_blank" href="https://github.com/nathanjrowe/traffic-light-sim">View the repository</a>
+                </div>
+                <div class="project-box">
                     <video muted loop class="hover-video">
                         <source src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/videos/Breakout+Game+2023-12-30+11-52-25.mp4">
                     </video>
@@ -120,7 +135,7 @@
                     <span class="title">Endless Centipede - Live Game Practice</span>
                     <span class="date">October 2023</span>
                     <span class="description">A game I made in Java using JavaFX. It is a clone of the classic arcade game Centipede.</span>
-                    <a target="_blank" href="https://github.com/BetaNate/Centipede">View the repository</a>
+                    <a class="repo" target="_blank" href="https://github.com/BetaNate/Centipede">View the repository</a>
                 </div>
                 <div class="project-box">
                     <video muted loop class="hover-video">
@@ -129,7 +144,7 @@
                     <span class="title">Hexapawn - Reinforced Learning</span>
                     <span class="date">September 2023</span>
                     <span class="description">Made with Java and JavaFX. Uses Reinforced Learning to eventually play a perfect game.</span>
-                    <a target="_blank" href="https://github.com/BetaNate/hexapawn-RL">View the repository</a>
+                    <a class="repo" target="_blank" href="https://github.com/BetaNate/hexapawn-RL">View the repository</a>
                 </div>
                 <div class="project-box">
                     <video muted loop class="hover-video">
@@ -138,7 +153,7 @@
                     <span class="title">Multiplication Circle - JavaFX Animation</span>
                     <span class="date">August 2023</span>
                     <span class="description">A simple animation made with Java and JavaFX. Visualizes multiplication patterns given user input.</span>
-                    <a target="_blank" href="https://github.com/BetaNate/multiplication-circle">View the repository</a>
+                    <a class="repo" target="_blank" href="https://github.com/BetaNate/multiplication-circle">View the repository</a>
                 </div>
                 <div class="project-box">
                     <img src="https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/demolay-site.PNG" alt="DeMolay Website">

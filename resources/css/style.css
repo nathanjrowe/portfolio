@@ -112,6 +112,7 @@ html, body {
    
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 20px 5px 20px 5px;
     margin: 20px 5px 20px 5px;
     width: 20%;
@@ -132,10 +133,10 @@ html, body {
     width: 100%;
     height: auto;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
 }
 
-.project-box a {
+.project-box .repo {
     color: #b68537;
     text-decoration: none;
     margin: 20px;
@@ -143,6 +144,18 @@ html, body {
     border-radius: 5px;
     padding: 5px;
     text-align: center;
+}
+
+.no-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.project-box a {
+    color:#b68537;
 }
 .project-box a:hover {
     color: #ffb338;
