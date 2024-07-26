@@ -1,0 +1,58 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "Haiku Finder",
+            "description": "Uses JS to try and create a haiku from user inputted text.",
+            "status": "June 2024",
+            "thumbnail": "https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/haiku-thumbnail.png",
+            "alt": "Haiku Finder Thumbnail",
+            "url": "https://github.com/nathanjrowe/haiku-generator-js"
+        },
+        {
+            "id": 2,
+            "name": "3D Traffic Simulator",
+            "description": "A 3D-rendered simulation of traffic light control of a small section of a city grid using the JavaFX library that I helped co-develop.",
+            "status": "March-April 2024",
+            "thumbnail": "none",
+            "alt": "Traffic Light Simulator Thumbnail",
+            "url": "https://github.com/nathanjrowe/traffic-light-sim"
+        },
+        {
+            "id": 3,
+            "name": "Breakout Competitive - Java Networking Project",
+            "description": "A team developed game of 4-player breakout using a UDP connection. Developed with Ethan Puzak and Araceli Casas.",
+            "status": "December 2023",
+            "thumbnail": "https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/videos/Breakout+Game+2023-12-30+11-52-25.mp4",
+            "alt": "Breakout Competitive Thumbnail",
+            "url": "/project/3"
+        },
+        {
+            "id": 4,
+            "name": "Endless Centipede - Live Game Practice",
+            "description": "A game I made in Java using JavaFX. It is a clone of the classic arcade game Centipede.",
+            "status": "October 2023",
+            "thumbnail": "https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/videos/Centipede+2023-11-21+01-04-22.mp4",
+            "alt": "Endless Centipede Thumbnail",
+            "url": "https://github.com/BetaNate/Centipede"
+        },
+        {
+            "id": 5,
+            "name": "Hexapawn - Reinforced Learning",
+            "description": "Made with Java and JavaFX. Uses Reinforced Learning to eventually play a perfect game.",
+            "status": "September 2023",
+            "thumbnail": "https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/videos/HER.mp4",
+            "alt": "Hexapawn Thumbnail",
+            "url": "https://github.com/BetaNate/hexapawn-RL"
+        },
+        {
+            "id": 6,
+            "name": "Multiplication Circle - JavaFX Animation",
+            "description": "A simple animation made with Java and JavaFX. Visualizes multiplication patterns given user input.",
+            "status": "August 2023",
+            "thumbnail": "https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/videos/header-background.mp4",
+            "alt": "Circle Thumbnail",
+            "url": "https://github.com/BetaNate/multiplication-circle"
+        }
+    ]
+}
