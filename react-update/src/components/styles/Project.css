@@ -1,0 +1,10 @@
+.Projects {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: 0 10%;
+}
+
+.Projects > * {
+    margin: 10px;
+}

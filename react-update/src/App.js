@@ -1,24 +1,45 @@
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import logo from './logo.svg';
+import { drawText } from './components/Game';
 import './App.css';
+import NavBar from './components/NavBar';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Header from './components/Header';
+
+const jsonPath = '/data/';
+const headerPath = jsonPath + 'header.json';
+const projectsPath = jsonPath + 'projects.json';
 
 function App() {
+  const [headerData, setHeaderData] = useState(null);
+  const [projectsData, setProjectsData] = useState(null);
+
+  useEffect(() => {
+    fetch(headerPath)
+      .then(response => response.json())
+      .then(data => setHeaderData(JSON.stringify(data)))
+      .catch(error => console.error('Error fetching header data:', error));
+  }, []);
+  useEffect(() => {
+    fetch(projectsPath)
+      .then(response => response.json())
+      .then(data => setProjectsData(data))
+      .catch(error => console.error('Error fetching projects data:', error));
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        {headerData && <NavBar json={headerData} />}
+        <Routes>
+          <Route exact path="/" element={headerData && <Header json={headerData}/>} />
+          <Route exact path="/projects" element={projectsData && <Projects json={projectsData}/>} />
+          <Route exact path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
