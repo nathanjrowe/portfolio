@@ -34,8 +34,8 @@ function App() {
       <div className="App">
         {headerData && <NavBar json={headerData} />}
         <Routes>
-          <Route exact path="/" element={headerData && <Header json={headerData}/>} />
-          <Route exact path="/projects" element={projectsData && <Projects json={projectsData}/>} />
+          <Route exact path="/" element={headerData && <Header json={headerData} />} />
+          <Route exact path="/projects" element={projectsData && <Projects json={projectsData} />} />
           <Route exact path="/contact" element={<Contact />} />
         </Routes>
       </div>

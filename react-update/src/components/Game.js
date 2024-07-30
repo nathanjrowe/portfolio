@@ -6,8 +6,10 @@ import './styles/Game.css';
 let text = "";
 const Game = (props) => {
     useEffect(() => {
-        draw(props);
-    }, []);
+        if (props.json) {
+            draw(props.json);
+        }
+    }, [props.json]);
 
     return (
         <canvas id="game">
@@ -16,15 +18,19 @@ const Game = (props) => {
     );
 }
 
- function draw(props) {
+ function draw(json) {
+    const jsonObject = JSON.parse(json);
     const canvas = document.getElementById('game');
     const ctx = canvas.getContext('2d');
     canvas.style.width = "100%";
     canvas.style.height = "100%";
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
-    ctx.font = '30px Arial';
-    ctx.fillText(props, 10, 50);
+    ctx.font = '600 6rem Playfair Display';
+    //Uppercase the title
+    jsonObject.title = jsonObject.title.toUpperCase();
+    ctx.fillStyle = 'white';
+    ctx.fillText(jsonObject.title, canvas.width / 2 - ctx.measureText(jsonObject.title).width / 2, canvas.height / 2);
 
     // Add event listener for click
     canvas.addEventListener('click', (event) => {
@@ -53,10 +59,11 @@ function Bullet(x, y, speed) {
             x: this.x,
             y: this.y
         };
-        ctx.clearRect(ls.x - 1, ls.y - 1, 2, 15);
+        ctx.clearRect(ls.x - 2, ls.y - 1, 4, 15);
         this.y -= this.speed;
         ctx.beginPath();
         ctx.strokeStyle = 'red';
+        ctx.lineWidth = 3;
         ctx.moveTo(ls.x, ls.y);
         ctx.lineTo(this.x, this.y);
         ctx.stroke();
@@ -73,7 +80,7 @@ function Bullet(x, y, speed) {
         }
         //Check if the bullet is collinding with text on the canvas
         for (let i = 0; i < imgData.length; i += 4) {
-            if (imgData[i] === 0 && imgData[i + 1] === 0 && imgData[i + 2] === 0 && imgData[i + 3] === 255) {
+            if (imgData[i] === 255 && imgData[i + 1] === 255 && imgData[i + 2] === 255 && imgData[i + 3] === 255) {
                 hit = true;
                 break;
             }
@@ -87,7 +94,7 @@ function Bullet(x, y, speed) {
         if (this.checkCollision()) {
             clearInterval(nIntervalId);
             nIntervalId = null;
-            ctx.clearRect(this.x - 3, this.y - 2, 6, 15);
+            ctx.clearRect(this.x - 5, this.y - 2, 10, 15);
             ctx.save();
         } else {
             this.draw();

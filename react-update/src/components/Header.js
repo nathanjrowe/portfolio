@@ -2,10 +2,10 @@ import React from 'react';
 import Game from './Game';
 
 import './styles/Header.css';
-const Header = (props) => {
+const Header = ({ json }) => {
     return (
         <div className="Header">
-            <Game title={props.json.title}/>
+            <Game json={json}/>
         </div>
     );
 }
