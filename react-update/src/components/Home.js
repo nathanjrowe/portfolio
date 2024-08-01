@@ -9,30 +9,19 @@ const Home = ({ json }) => {
                 <Game json={json.header} />
             </Banner>
             <section id="about">
-                <Banner presets="center left-text-img">
-                    <Frame frametype="bubble" presets="bubble" color="yellow">
-                        <img src={json.about.image} />
-                    </Frame>
-                    <p>{json.about.description}</p>
-                </Banner>
-                <Banner presets="center left-text-img">
-                    <Frame frametype="bubble" presets="bubble" color="yellow">
-                        <img src={json.about.image} />
-                    </Frame>
-                    <p>{json.about.description}</p>
-                </Banner>
-                <Banner presets="center left-text-img">
-                    <Frame frametype="bubble" presets="bubble" color="yellow">
-                        <img src={json.about.image} />
-                    </Frame>
-                    <p>{json.about.description}</p>
-                </Banner>
-                <Banner presets="center left-text-img">
-                    <Frame frametype="bubble" presets="bubble" color="yellow">
-                        <img src={json.about.image} />
-                    </Frame>
-                    <p>{json.about.description}</p>
-                </Banner>
+
+                {json.about &&
+                    json.about.sections.map((item, index) => {
+                        return (
+                            <Banner key={index} presets="center left-text-img">
+                                <Frame frametype="bubble" presets="bubble" color="yellow">
+                                    <img src={item.image} />
+                                </Frame>
+                                <p>{item.description}</p>
+                            </Banner>
+                        );
+                    })
+                }
             </section>
             
         </>
