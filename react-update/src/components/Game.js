@@ -1,8 +1,4 @@
 import React, { useEffect } from 'react';
-import './styles/Game.css';
-
-
-
 let text = "";
 const Game = (props) => {
     useEffect(() => {
@@ -18,7 +14,7 @@ const Game = (props) => {
     );
 }
 
- function draw(json) {
+ async function draw(json) {
     const jsonObject = JSON.parse(json);
     const canvas = document.getElementById('game');
     const ctx = canvas.getContext('2d');
@@ -26,9 +22,10 @@ const Game = (props) => {
     canvas.style.height = "100%";
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
-    ctx.font = '600 6rem Playfair Display';
-    //Uppercase the title
-    jsonObject.title = jsonObject.title.toUpperCase();
+
+    await document.fonts.load('600 8rem Cinzel');
+    
+    ctx.font = '600 8rem Cinzel';
     ctx.fillStyle = 'white';
     ctx.fillText(jsonObject.title, canvas.width / 2 - ctx.measureText(jsonObject.title).width / 2, canvas.height / 2);
 
