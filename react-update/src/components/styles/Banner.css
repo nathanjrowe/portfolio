@@ -5,6 +5,17 @@
     font-size: 1.5em;
 }
 
+.seperator {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+
 .pop {
     box-shadow: -20px 0px 20px 1px rgba(0, 0, 0 , .7);
 }
@@ -38,6 +49,7 @@
 
     .Banner {
         height: fit-content;
+        text-align: center;
     }
     .left-text-img, .right-text-img {
         flex-direction: column;

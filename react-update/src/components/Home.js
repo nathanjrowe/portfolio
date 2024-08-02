@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from './Banner';
 import Game from './Game';
 import Frame from './Frame';
+import Projects from './Projects';
 const Home = ({ json }) => {
     return (
         <>
@@ -23,6 +24,10 @@ const Home = ({ json }) => {
                     })
                 }
             </section>
+            <Banner presets="seperator">
+                <h2>Projects</h2>
+            </Banner>
+            <Projects json={json.projects} />
             
         </>
     );

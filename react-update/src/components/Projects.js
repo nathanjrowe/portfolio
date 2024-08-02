@@ -6,7 +6,9 @@ const Projects = ({ json }) => {
     //Print each project in the json file
     return (
         <div className="Projects">
-            {json.projects.map((project, index) => <Card key={index} info={project} />)}
+            <div className="inner">
+                {json.projects.map((project, index) => <Card className="item" key={index} info={project} />)}
+            </div>
         </div>
     );
 }

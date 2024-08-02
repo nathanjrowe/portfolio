@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import logo from './logo.svg';
-import { drawText } from './components/Game';
 import './App.css';
 import NavBar from './components/NavBar';
 import Projects from './components/Projects';
@@ -37,12 +35,14 @@ function App() {
   }, []);
   const homeObject = {
     header: headerData, 
-    about: aboutData
+    about: aboutData,
+    projects: projectsData
   };
 
   return (
     <Router>
       <div className="App">
+        <img id="logo" src="./logo.svg" alt="logo" />
         {headerData && <NavBar json={headerData} />}
         <Routes>
           <Route exact path="/" element={headerData && aboutData && <Home json={homeObject} />} />

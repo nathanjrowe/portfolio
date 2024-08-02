@@ -7,7 +7,6 @@ function NavBar({ json }) {
 
   return (
     <nav className="NavBar">
-      <h1>{data.title}</h1>
       <ul>
         {data.nav.map((item, index) => (
           <li key={index}>

@@ -1,10 +1,10 @@
-.Projects {
+.inner{
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    margin: 0 10%;
+    margin: 0 5%;
 }
 
-.Projects > * {
-    margin: 10px;
+.inner > *{
+    flex: 4 400px;
 }
