@@ -3,6 +3,7 @@ import Banner from './Banner';
 import Game from './Game';
 import Frame from './Frame';
 import Projects from './Projects';
+import TypeText from './typewrite';
 const Home = ({ json }) => {
     return (
         <>
@@ -14,11 +15,9 @@ const Home = ({ json }) => {
                 {json.about &&
                     json.about.sections.map((item, index) => {
                         return (
-                            <Banner key={index} presets="center left-text-img">
-                                <Frame frametype="bubble" presets="bubble" color="yellow">
-                                    <img src={item.image} />
-                                </Frame>
-                                <p>{item.description}</p>
+                            <Banner key={index} presets="center cover">
+                                <Frame className="image" frametype="bubble" presets="bubble" color="yellow" img={item.image} />
+                                <TypeText className="desc" text={item.description} />
                             </Banner>
                         );
                     })

@@ -1,29 +1,28 @@
 import React, { useEffect } from "react";
 import "./styles/Frame.css";
-
-const Frame = ({ children, frametype = "" , presets, color = 'white'}) => {
-
+var imgURL = "";
+const Frame = ({frametype = "" , presets, color = 'white', className, img}) => {
+ imgURL = img;
   useEffect(() => {
-    handleSVGLoad(color);
-  }, [color]);
+    handleSVGLoad();
+  }, []);
 
   return (
-    <div className={`Frame ${presets}`}>
-        {children}
+    <div className={`Frame ${presets} ${className}`} id="Frame">
         {frametype ? <object className="framestyle" id="framestyle" data={ `./frame-styles/${frametype}.svg` } type="image/svg+xml" onLoad={handleSVGLoad}/> : null}
     </div>
   );
 };
 
 
-const handleSVGLoad = (color) => {
+const handleSVGLoad = () => {
   const svg = document.getElementById("framestyle");
-  svg.addEventListener("load", () => { 
-    const svgDoc = svg.contentDocument;
-    const svgContainer = svgDoc.getElementById("svg-container");
-    const svgElement = svgDoc.getElementById("framedesign");
-    //Set the color of the SVG element
-    svgElement.style.fill = color;    
+  svg.addEventListener("load", () => {
+  const svg = document.getElementById("framestyle");
+  const svgDoc = svg.contentDocument;
+  const imageContainer = svgDoc.getElementById("image-inset");
+  console.log(imageContainer);
+  imageContainer.setAttribute("xlink:href", imgURL);
   });  
 };
 

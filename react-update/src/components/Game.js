@@ -1,11 +1,20 @@
 import React, { useEffect } from 'react';
-let text = "";
+
+var jsonObject = null;
 const Game = (props) => {
+
+    if([props.json]) {
+        jsonObject = JSON.parse(props.json);
+    }
+
     useEffect(() => {
-        if (props.json) {
-            draw(props.json);
+        if (jsonObject) {
+            draw();
+            window.addEventListener('resize', () => {
+                handleResize();
+            });
         }
-    }, [props.json]);
+    }, [jsonObject]);
 
     return (
         <canvas id="game">
@@ -14,20 +23,16 @@ const Game = (props) => {
     );
 }
 
- async function draw(json) {
-    const jsonObject = JSON.parse(json);
+ function draw() {
+    
     const canvas = document.getElementById('game');
-    const ctx = canvas.getContext('2d');
     canvas.style.width = "100%";
     canvas.style.height = "100%";
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
 
-    await document.fonts.load('600 8rem Cinzel');
-    
-    ctx.font = '600 8rem Cinzel';
-    ctx.fillStyle = 'white';
-    ctx.fillText(jsonObject.title, canvas.width / 2 - ctx.measureText(jsonObject.title).width / 2, canvas.height / 2);
+    //Draw the text
+    drawText();
 
     // Add event listener for click
     canvas.addEventListener('click', (event) => {
@@ -37,6 +42,25 @@ const Game = (props) => {
         const y = rect.bottom;
         new Bullet(x, y, 5);
     });
+}
+
+function handleResize() {
+    const canvas = document.getElementById('game');
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    drawText();
+}
+
+async function drawText() {
+    
+    const canvas = document.getElementById('game');
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    await document.fonts.load('600 8vw Cinzel');
+    
+    ctx.font = '600 8vw Cinzel';
+    ctx.fillStyle = 'white';
+    ctx.fillText(jsonObject.title, canvas.width / 2 - ctx.measureText(jsonObject.title).width / 2, canvas.height / 2);
 }
 
 function Bullet(x, y, speed) {
@@ -98,4 +122,6 @@ function Bullet(x, y, speed) {
         }
     };
 }
+
+
 export default Game;

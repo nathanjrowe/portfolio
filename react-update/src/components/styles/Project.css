@@ -1,10 +1,19 @@
 .inner{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     margin: 0 5%;
 }
 
 .inner > *{
-    flex: 4 400px;
+    -webkit-box-flex: 4;
+        -ms-flex: 4 400px;
+            flex: 4 400px;
 }
