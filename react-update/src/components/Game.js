@@ -10,10 +10,16 @@ const Game = (props) => {
     useEffect(() => {
         if (jsonObject) {
             draw();
-            window.addEventListener('resize', () => {
+            window.addEventListener('resize', handleResize);
+
+            return () => { window.removeEventListener('resize', handleResize ); };
+        }
+
+        return () => {
+            window.removeEventListener('resize', () => {
                 handleResize();
             });
-        }
+        };
     }, [jsonObject]);
 
     return (

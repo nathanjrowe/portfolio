@@ -4,7 +4,7 @@ var imgURL = "";
 const Frame = ({frametype = "" , presets, color = 'white', className, img}) => {
  imgURL = img;
   useEffect(() => {
-    handleSVGLoad();
+   handleSVGLoad();
   }, []);
 
   return (
@@ -21,7 +21,7 @@ const handleSVGLoad = () => {
   const svg = document.getElementById("framestyle");
   const svgDoc = svg.contentDocument;
   const imageContainer = svgDoc.getElementById("image-inset");
-  console.log(imageContainer);
+  //console.log(imageContainer);
   imageContainer.setAttribute("xlink:href", imgURL);
   });  
 };

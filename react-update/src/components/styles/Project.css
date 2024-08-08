@@ -16,4 +16,5 @@
     -webkit-box-flex: 4;
         -ms-flex: 4 400px;
             flex: 4 400px;
+    margin: 5px;
 }

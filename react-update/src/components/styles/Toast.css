@@ -1,0 +1,32 @@
+.Toast {
+    display: inline-block;
+    top: 0;
+    right: 0;
+    color: #fff;
+    padding: 0px 3px;
+    z-index: 999;
+    word-break: normal !important;
+}
+
+.Toast .contact-toast {
+    position:fixed;
+    background-color: #fff;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80% !important;
+}
+
+.Toastify__toast-body > div:last-child {
+    word-break: normal !important;
+}
+
+#close-toast {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    cursor: pointer;
+}
