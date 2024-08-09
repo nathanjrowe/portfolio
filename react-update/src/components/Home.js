@@ -1,31 +1,33 @@
 import React, { useEffect, useRef, useState } from 'react';
-import  { createRoot } from 'react-dom/client';
 import { Portal } from 'react-portal';
+import { useInView } from 'framer-motion';
 import Banner from './Banner';
 import Game from './Game';
 import Frame from './Frame';
 import Projects from './Projects';
-import { animateText } from './typewrite';
+import { animateText } from './scripts/typewrite';
 import Toast from './Toast';
 import Contact from './Contact';
 
 const Home = ({ json }) => {
     const hasAnimated = useRef(false);
+    const viewRef = useRef(false);
+    const inView = useInView(viewRef, { once: true, amount: 0.8 });
     const [toastContent, setToastContent] = useState(null);
     
     useEffect(() => {
         
         json.about.sections.forEach((item, index) => {
             if (!hasAnimated.current) {
-                animateText(`about-text-${index}`, item.description).then(() => {
-                    handleToast();
-                });
-                hasAnimated.current = true;
+                if(inView) {
+                    animateText(`about-text-${index}`, item.description).then(() => { handleToast(); });
+                    hasAnimated.current = true;
+                }
             }
         });
 
         
-    }, [json]);
+    }, [json, inView]);
 
     const handleToast = () => {
         document.querySelectorAll('.contact-toast').forEach(toast => {
@@ -45,7 +47,7 @@ const Home = ({ json }) => {
                         return (
                             <Banner key={index} presets="center cover">
                                 <Frame className="image" frametype="comic" presets="comic" color="yellow" img={item.image} />
-                                <span className="desc" id={`about-text-${index}`}></span>
+                                <span ref={viewRef} className="desc" id={`about-text-${index}`}></span>
                             </Banner>
                         );
                     })

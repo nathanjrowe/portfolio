@@ -13,16 +13,15 @@ const Toast = ({text, component}) => {
 
     return (
         <div className="Toast"  onClick={() => notify(component)}>
-            <span id="toast-link" className="link">{text}</span>
+            <span id="toast-link" className="link">{text}<i class="material-icons">arrow_right_alt</i></span>
             <ToastContainer className="contact-toast"
                 position="top-center"
                 autoClose={false}
                 limit={1}
                 newestOnTop={false}
-              
                 rtl={false}
                 draggable
-/>
+            />
         </div>
     );
 };

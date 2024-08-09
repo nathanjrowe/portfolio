@@ -1,9 +1,9 @@
 .Toast {
     display: inline-block;
+    text-wrap: nowrap;
     top: 0;
     right: 0;
     color: #fff;
-    padding: 0px 3px;
     z-index: 999;
     word-break: normal !important;
 }

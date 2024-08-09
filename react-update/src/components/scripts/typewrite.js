@@ -2,7 +2,7 @@ export const animateText = (id, text) => {
     return new Promise((resolve) => {
         let i = 0;
         let j = 0;
-        const delta = 10;
+        const delta = 15;
         const textElement = document.getElementById(id);
         const tempContainer = document.createElement('div');
         tempContainer.innerHTML = text;

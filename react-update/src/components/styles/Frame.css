@@ -6,7 +6,7 @@
     
     position: relative;
     overflow: visible;
-    
+    z-index: -1;
 }
 
 .framestyle {

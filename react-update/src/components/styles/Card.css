@@ -39,9 +39,11 @@ img, video {
 }
 
 .front p {
+    display: none;
     padding: 10px;
 }
 .front button {
+    display: none;
     margin-left: 30%;
     margin-right: 30%;
     padding: 10px;
