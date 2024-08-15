@@ -1,4 +1,4 @@
-export const animateText = (id, text) => {
+export const animateInnerHTML = (id, text) => {
     return new Promise((resolve) => {
         let i = 0;
         let j = 0;
@@ -29,5 +29,24 @@ export const animateText = (id, text) => {
             }
         };
         typeWriter();
+    });
+};
+
+export const parseInnerHTML = (id, text) => {
+    return new Promise((resolve) => {
+    const textElement = document.getElementById(id);
+    const tempContainer = document.createElement('div');
+    tempContainer.innerHTML = text;
+    const nodes = Array.from(tempContainer.childNodes);
+
+    for (let i = 0; i < nodes.length; i++) {
+        const node = nodes[i];
+        if(node.nodeType === Node.TEXT_NODE) {
+            textElement.innerHTML += node.textContent;
+        } else {
+            textElement.appendChild(node.cloneNode(true));
+        }
+    }
+    resolve();
     });
 };

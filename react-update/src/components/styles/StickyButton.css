@@ -1,0 +1,26 @@
+.Button {
+    position: fixed;
+    display: inline-block;
+    background-color: blue;
+    border-radius: 10px;
+    padding: 20px 40px;
+    box-shadow: -5px 5px 0px rgba(0, 0, 0, 1);
+    text-decoration: none;
+    color: white;
+    z-index: 2;
+    bottom: 0;
+    right: 5%;
+    margin: 50px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 800px){
+    .Button {
+       width: 100%;
+       margin: 0 auto;
+       padding: 20px 0px 20px 0px;
+       right: auto;
+       box-shadow: none;
+       border-radius: 0%;
+    }
+}

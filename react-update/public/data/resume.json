@@ -1,0 +1,94 @@
+{
+    "Education": [
+        {
+            "School": "University of New Mexico",
+            "Degree": "B.S. in Computer Science",
+            "Minor": "Business Management",
+            "Graduation": "December 2024"
+        },
+        {
+            "School": "Central New Mexico Community College",
+            "Degree": "A.S. in Physics",
+            "Graduation": "April 2022"
+        },
+        {
+            "School": "Central New Mexico Community College",
+            "Degree": "A.S. in Engineering",
+            "Graduation": "April 2022"
+        },
+        {
+            "School": "Central New Mexico Community College",
+            "Degree": "A.S. in Mathematical Sciences",
+            "Graduation": "April 2022"
+        },
+        {
+            "School": "Central New Mexico Community College",
+            "Degree": "A.S. in Computer Science",
+            "Graduation": "December 2021"
+        },
+        {
+            "School": "Central New Mexico Community College",
+            "Degree": "A.S. in Computer Science",
+            "Graduation": "December 2021"
+        }
+    ],
+    "Experience": [
+       {
+            "Company": "Captain Chucks Flavor Island",
+            "Position": "Website Design",
+            "Start": "May 2023",
+            "End": "August 2023",
+            "Description": "Worked on a team to develop a new feature for the company's website."
+        },
+        {
+            "Company": "Waterway Inc.",
+            "Position": "Website Design",
+            "Start": "May 2022",
+            "End": "August 2022",
+            "Description": "Developed a mobile application for the company's customers."
+        },
+        {
+
+        },
+        {
+            "Company": "Einstein Bros. Bagels",
+            "Position": "Team Member",
+            "Start": "January 2022",
+            "End": "Present",
+            "Description": "Worked as a team member to provide excellent customer service."
+        }
+    ],
+    "Skills": [
+        {
+            "Programming Languages": ["Java", "Python", "JavaScript", "C++", "HTML", "CSS"],
+            "Frameworks": ["React", "Node.js", "Express.js", "Bootstrap"],
+            "Databases": ["MySQL", "MongoDB"],
+            "Tools": ["Git", "VS Code", "Postman", "Jira"],
+            "Operating Systems": ["Windows", "Linux"]
+        }
+    ],
+    "Community Involvement": [
+        {
+            "Organization": "New Mexico DeMolay",
+            "Position": "Youth Mentor",
+            "Start": "January 2022",
+            "End": "Present",
+            "Description": "Helped organize and participate in community service events."
+        },
+        {
+            "Organization": "New Mexico DeMolay",
+            "Position": "Youth Member",
+            "Start": "October 2014",
+            "End": "September 2023",
+            "Description": "Served as an officer in the local chapter."
+        },
+        {
+            "Organization": "Roadrunner Food Bank",
+            "Position": "Client Intake Volunteer",
+            "Start": "May 2022",
+            "End": "August 2022",
+            "Description": "Assisted clients with food distribution."
+
+        }
+    ]
+}

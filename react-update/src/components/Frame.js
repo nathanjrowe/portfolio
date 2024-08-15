@@ -16,14 +16,16 @@ const Frame = ({frametype = "" , presets, color = 'white', className, img}) => {
   return (
     <div className={`Frame ${presets} ${className}`} id="Frame">
         {frametype ? <motion.object 
-                      initial = {{rotate: 70, x: -350,opacity: 0 }}
-                      whileInView = {{rotate: 0, x: 0, opacity: 1,
+                      initial = {{rotate: -5, y: -350,opacity: 0 }}
+                      whileInView = {{rotate: 0, y: 0, opacity: 1,
                         transition: {
-                          type: "linear",
+                          type: "spring",
                           duration: 1.2,
+                          bounce: 0.2,
+                          delay: 0.5
                         }
                       }}
-                      viewport={{amount: 0.5, once: true}}
+                      viewport={{amount: .2, once: true}}
                        className={`framestyle ${frametype}`} id="framestyle" data={ `./frame-styles/${frametype}.svg` } type="image/svg+xml" onLoad={handleSVGLoad}/> : null}
     </div>
   );

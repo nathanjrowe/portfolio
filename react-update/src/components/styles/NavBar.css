@@ -14,17 +14,18 @@
             flex-direction: column;
     position: sticky;
     top: 0;
-    z-index: 1;
-    background-color: rgb(28, 27, 31);
+    z-index: 5;
+    background-color: #F8EDE3;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-top: 100px;
 }
 
 .nav-menu{
     padding:  3vh;
     text-align: center;
     text-transform: uppercase;
-    font-size: 1.8em;
+    font-size: 1.8vw;
     list-style: none;
     margin: 0;
 }
@@ -55,16 +56,18 @@
     padding: 1vh 5vh 1vh 5vh;
 }
 
-.NavBar li:not(:first-child) {
+.NavBar li {
     border-right: 10px double rgb(114, 71, 22);
 }
-.NavBar li:not(:last-child) {
+
+.NavBar li:first-child {
     border-left: 10px double rgb(114, 71, 22);
 }
 
+
 .NavBar li a {
     text-decoration: none;
-    color:rgb(114, 71, 22);
+    color:rgb(107, 36, 12);
     font-family: 'Poppins', sans-serif;
     position: relative;
 }
@@ -76,7 +79,7 @@
     bottom: -2px;
     height: 2px;
     width: 0;
-    background: rgba(114, 71, 22, 0.7);
+    background-image: radial-gradient(circle,rgb(228, 143, 69), rgb(153, 77, 28));
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -85,16 +88,16 @@
     transition: width 0.5s ease-in-out;
 }
 
-.NavBar li a:hover::after, .NavBar li a:focus::after {
+.NavBar li a:hover::after {
     width: 100%;
 }
 
 .NavBar li a:hover {
-    -webkit-filter: brightness(1.5);
-            filter: brightness(1.5);
+    -webkit-filter: brightness(1.2);
+            filter: brightness(1.2);
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
 
     .burger {
         display: block;
@@ -102,10 +105,11 @@
         z-index: 1;
     }
 
-    .NavBar li:not(:first-child) {
+    .NavBar li {
         border-right: none;
     }
-    .NavBar li:not(:last-child) {
+    
+    .NavBar li:first-child {
         border-left: none;
     }
 

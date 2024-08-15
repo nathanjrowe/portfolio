@@ -1,5 +1,5 @@
 
-.Card {
+.ImageCard {
     position: relative;
     width: 350px;
     height: 500px;
@@ -7,7 +7,7 @@
    
 }
 
-img, video {
+.ImageCard img, .ImageCard video {
     -o-object-fit: cover;
        object-fit: cover;
     width: 100%;
@@ -19,7 +19,7 @@ img, video {
     z-index: -1;
 }
 
-.front {
+.ImageCard .front {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -31,43 +31,60 @@ img, video {
     bottom: 0;
     top: 80%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(75, 25, 8, 0.8);
     text-wrap: pretty;
     color: white;
-    border-top: 5px solid white;
+    border-top: 5px solid rgb(245, 204, 160);
     font-weight: 600;
+    text-align: center;
 }
 
-.front p {
+.ImageCard .front p {
     display: none;
     padding: 10px;
 }
-.front button {
+.ImageCard .front button {
     display: none;
     margin-left: 30%;
     margin-right: 30%;
-    padding: 10px;
-    background-color: #4CAF50;
+    background-color: blue;
+    border-radius: 10px;
+    padding: 20px 40px;
+    box-shadow: -5px 5px 0px rgba(0, 0, 0, 1);
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-.Card:hover .front {
+.ImageCard:hover .front {
     -webkit-animation : slideUp 0.6s forwards;
             animation : slideUp 0.6s forwards;
 }
 
-.Card:hover .front p, .Card:hover .front button {
+.ImageCard:hover .front p, .ImageCard:hover .front button {
     display: block;
 }
 
-.Card:hover .front button:hover {
-    background-color: #45a049;
+
+.InfoCard {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-style: solid;
+    border-width: 5px;
+    border-image: linear-gradient(rgb(228, 143, 69), rgb(153, 77, 28)) 5 / 5px;
+    width: 550px;
 }
 
-@-webkit-keyframes slideUp {
+.InfoCard h3 {
+    font-size: 1.5em;
+    padding-left: 10px;
+}
+
+.InfoCard p {
+    font-size: 1.1em;
+    padding-left: 20px;
+}
+
+@-webkit-keyframes slideUp { 
     from {
         top: 80%;
     }
@@ -82,5 +99,29 @@ img, video {
     }
     to {
         top: 0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .InfoCard {
+        width: 80%;
+        text-align: center;
+    }
+
+    .InfoCard h3, .InfoCard p {
+        padding-left: 0px;
+        padding: 10px;
+    }
+
+    .ImageCard .front {
+        top: 20%;
+    }
+
+    .ImageCard:hover .front {
+        animation: none;
+    }
+
+    .ImageCard .front p, .ImageCard .front button {
+        display: block;
     }
 }

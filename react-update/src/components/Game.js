@@ -6,7 +6,6 @@ const Game = (props) => {
     if([props.json]) {
         jsonObject = JSON.parse(props.json);
     }
-
     useEffect(() => {
         if (jsonObject) {
             draw();
@@ -30,10 +29,12 @@ const Game = (props) => {
 }
 
  function draw() {
-    
+    var x = window.matchMedia('(max-width: 850px)');
+
     const canvas = document.getElementById('game');
     canvas.style.width = "100%";
-    canvas.style.height = "100%";
+    canvas.style.height = x.matches ? "20vh" : "500px";
+    canvas.style.backgroundColor = "#291511";
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
 
@@ -89,7 +90,7 @@ function Bullet(x, y, speed) {
         ctx.clearRect(ls.x - 2, ls.y - 1, 4, 15);
         this.y -= this.speed;
         ctx.beginPath();
-        ctx.strokeStyle = 'red';
+        ctx.strokeStyle = '#D0B8A8';
         ctx.lineWidth = 3;
         ctx.moveTo(ls.x, ls.y);
         ctx.lineTo(this.x, this.y);

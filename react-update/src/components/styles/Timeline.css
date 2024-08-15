@@ -1,0 +1,42 @@
+.Timeline {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.Timeline ul {
+    position: relative;
+    list-style-type: none;
+
+}
+.Timeline li:not(.indicator):before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    top: 5px;
+    bottom: -20px;
+    left: -15px;
+    background-color: rgb(109, 37, 13);
+}
+
+.Timeline li {
+    position: relative;
+    padding-bottom: 1em;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.Timeline li .bullet-hollow {
+    position: absolute;
+    margin-left: -45px;
+    padding-right: 8px;
+    
+}
+
+.bullet-small {
+    position: absolute;
+    top: 19px;
+    margin-left: 3px;
+    z-index: 1;
+}

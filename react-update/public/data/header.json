@@ -11,9 +11,14 @@
             "url": "/projects"
         },
         {
+            "name": "Resume",
+            "url": "/resume"
+        },
+        {
             "name": "Contact",
             "url": "/contact"
         }
+        
     ], 
     "social": [
         {
