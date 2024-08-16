@@ -12,7 +12,7 @@ import Contact from './components/Contact';
 const Home = ({ json }) => {
     const hasAnimated = useRef(false);
     const viewRef = useRef(false);
-    const inView = useInView(viewRef, { once: true, amount: 0.8 });
+    const inView = useInView(viewRef, { once: true, amount: 0.6 });
 
     const [toastContent, setToastContent] = useState(null);
     var x = window.matchMedia("(max-width: 850px)");
@@ -63,15 +63,6 @@ const Home = ({ json }) => {
                     })
                 }
             </section>
-            <Banner  presets="seperator">
-                <motion.h2 
-                    initial={{ textShadow: "8px 8px 5px rgba(0, 0, 0, 1), 0vw 0px 0px rgba(153, 77, 28, 0.5), 0vw 0px 0px rgba(228, 143, 69, 0.5)"}}
-                    whileInView={{ textShadow: "8px 8px 5px rgba(0, 0, 0, 1), -15vw 0px 0px  rgba(153, 77, 28, 0.8), 15vw 0px 0px rgba(228, 143, 69, 0.8)"}}
-                    transition={{ duration: 1 }}
-                >
-                    Projects
-                </motion.h2>
-            </Banner>
             <Projects json={json.projects}/>
             {toastContent && (
                 <Portal node={document.querySelector('.contact-toast')}>

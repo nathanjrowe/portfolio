@@ -39,7 +39,6 @@ const handleSVGLoad = () => {
   const imageContainer = svgDoc.getElementById("image-inset");
   //console.log(imageContainer);
   imageContainer.setAttribute("xlink:href", imgURL);
-  console.log(imageContainer);
   });  
 };
 

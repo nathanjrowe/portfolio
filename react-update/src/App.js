@@ -98,7 +98,7 @@ function App() {
         </motion.div>
         {headerData && <NavBar json={headerData}/>}
         <Routes>
-          <Route exact path="/" element={headerData && aboutData && <Home json={homeObject} />} />
+          <Route exact path="/" element={headerData && aboutData && projectsData && <Home json={homeObject} />} />
           <Route exact path="/projects" element={projectsData && <Projects json={projectsData} />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/resume" element={<Resume json={resumeData}/>} />

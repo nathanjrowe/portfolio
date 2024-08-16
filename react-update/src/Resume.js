@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Card from "./components/Card";
 import Timeline from "./components/Timeline";
 import Banner from "./components/Banner";
@@ -24,7 +24,7 @@ const Resume = ({ json }) => {
                             </motion.h2>
                         </Banner>
                         
-                        <Timeline ref={useRef}>
+                        <Timeline>
                             {json[key].map((item, index) => (
                                 <Card key={index} info={item} />
                             ))}

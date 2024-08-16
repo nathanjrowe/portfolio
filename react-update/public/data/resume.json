@@ -2,69 +2,65 @@
     "Education": [
         {
             "School": "University of New Mexico",
-            "Degree": "B.S. in Computer Science",
+            "Degree": "Bachelor of Science: Computer Science",
             "Minor": "Business Management",
             "Graduation": "December 2024"
         },
         {
             "School": "Central New Mexico Community College",
-            "Degree": "A.S. in Physics",
+            "Degree": "Associate of Science: Physics",
             "Graduation": "April 2022"
         },
         {
             "School": "Central New Mexico Community College",
-            "Degree": "A.S. in Engineering",
+            "Degree": "Associate of Science: Engineering",
             "Graduation": "April 2022"
         },
         {
             "School": "Central New Mexico Community College",
-            "Degree": "A.S. in Mathematical Sciences",
+            "Degree": "Associate of Science: Mathematical Sciences",
             "Graduation": "April 2022"
         },
         {
             "School": "Central New Mexico Community College",
-            "Degree": "A.S. in Computer Science",
+            "Degree": "Associate of Science: Computer Science",
             "Graduation": "December 2021"
         },
         {
-            "School": "Central New Mexico Community College",
-            "Degree": "A.S. in Computer Science",
-            "Graduation": "December 2021"
+            "School": "Sandia High School",
+            "Degree": "High School Diploma",
+            "Graduation": "April 2020"
         }
     ],
     "Experience": [
        {
             "Company": "Captain Chucks Flavor Island",
-            "Position": "Website Design",
-            "Start": "May 2023",
-            "End": "August 2023",
-            "Description": "Worked on a team to develop a new feature for the company's website."
+            "Position": "Website Designer",
+            "Start": "April 2022",
+            "End": "March 2024",
+            "What I Did": "I managed the company's Shopify e-commerce website, where I constructed the UX and implemented customized front-end features not normally available on the platform. Learned a small extent of Liquid, Shopfy's native template language."
         },
         {
             "Company": "Waterway Inc.",
-            "Position": "Website Design",
-            "Start": "May 2022",
-            "End": "August 2022",
-            "Description": "Developed a mobile application for the company's customers."
-        },
-        {
-
+            "Position": "Freelance - Website Design",
+            "Start": "January 2024",
+            "End": "May 2024",
+            "What I Did": "Created a Shopify e-commerce platform for the company's verified customers. The company three different storefronts for various customer tiers, so I learned a lot about restricting access scopes based on user permissions."
         },
         {
             "Company": "Einstein Bros. Bagels",
             "Position": "Team Member",
             "Start": "January 2022",
             "End": "Present",
-            "Description": "Worked as a team member to provide excellent customer service."
+            "What I Did": "Worked as a team member to provide excellent customer service."
         }
     ],
     "Skills": [
         {
-            "Programming Languages": ["Java", "Python", "JavaScript", "C++", "HTML", "CSS"],
-            "Frameworks": ["React", "Node.js", "Express.js", "Bootstrap"],
-            "Databases": ["MySQL", "MongoDB"],
-            "Tools": ["Git", "VS Code", "Postman", "Jira"],
-            "Operating Systems": ["Windows", "Linux"]
+            "Programming Languages": "Java, Python, JavaScript, HTML, CSS",
+            "Frameworks": "React",
+            "Tools": "Git, VS Code, Shopify CLI",
+            "Operating Systems": "Windows, Linux"
         }
     ],
     "Community Involvement": [
@@ -73,21 +69,21 @@
             "Position": "Youth Mentor",
             "Start": "January 2022",
             "End": "Present",
-            "Description": "Helped organize and participate in community service events."
+            "Description": "Actively helping youth follow Roberts Rules of Order to plan fun activities and encourage community service projects."
         },
         {
             "Organization": "New Mexico DeMolay",
             "Position": "Youth Member",
             "Start": "October 2014",
             "End": "September 2023",
-            "Description": "Served as an officer in the local chapter."
+            "Description": "Helped organize and participate in community service events and fundraising goals. I served as a leader to many other members of the organization and served as a state youth representative of the organization from 2020 to 2023."
         },
         {
             "Organization": "Roadrunner Food Bank",
             "Position": "Client Intake Volunteer",
             "Start": "May 2022",
             "End": "August 2022",
-            "Description": "Assisted clients with food distribution."
+            "Description": "Assisted with recording client information and food distribution at a mobile food pantry."
 
         }
     ]

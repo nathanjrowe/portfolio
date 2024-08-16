@@ -1,33 +1,46 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles/Card.css';
-const Card = (props) => {
+import { autoPlay } from './scripts/autoplay';
+
+const Card = ({info = '', children}) => {
     let card;
+
+    useEffect(() => {
+        const videos = document.querySelectorAll('.card-video');
+        if(videos) {
+            autoPlay(videos, '.ImageCard');
+        }
+    }, []);
+
+
     const imageCard = (
         <div className="ImageCard">
-          {props.info.thumbnail ? (props.info.thumbnail.type === "video" ? <video><source src={props.info.thumbnail.url} type="video/mp4"/></video> : <img src={props.info.thumbnail.url} alt={props.info.thumbnail.alt} />) : null}
+          {info.thumbnail ? (info.thumbnail.type === "video" ? <video muted loop className="card-video"><source src={info.thumbnail.url} type="video/mp4"/></video> : <img src={info.thumbnail.url} alt={info.thumbnail.alt} />) : null}
             <div className="front">
-                <h2>{props.info.name}</h2>
-                <p>{props.info.description}</p>
-                {props.info.url ? <button onClick={() => window.open(props.info.url)}>Learn More</button> : null}
+                <h2>{info.name}</h2>
+                <p>{info.description}</p>
+                {info.url ? <button onClick={() => window.open(info.url)}>Learn More</button> : null}
             </div>
         </div>
     );
 
     const textCard = (
         <div className="InfoCard">
-            {Object.keys(props.info).map((key, index) => {
+            
+            {info ? Object.keys(info).map((key, index) => {
                 return (
                 <div key={index}>
                     <h3>{key}</h3>
-                    <p>{props.info[key]}</p>
+                    <p>{info[key]}</p>
                 </div>)
-            })}
+            }): children}
         </div>
     );
 
-    card = props.info.thumbnail ? imageCard : textCard;
+    card = info ? (info.thumbnail ? imageCard : textCard) : textCard;
 
     return card;
 }
+
 
 export default Card;
