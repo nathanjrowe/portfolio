@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { handleSubmit } from './scripts/form-submission-handler';
 import './styles/Contact.css';
 
 const Contact = () => {
+
+    useEffect(() => {
+        handleSubmit();
+    }, []);
+
     return (
         <section className="Contact">
-            <div className="text">Contact us Form</div>
-            <form className=" gform" method='post' action='https://script.google.com/macros/s/AKfycbxz4NSI8Ls8IZKwYdhhvNNFSfVSI2xttwV7HwWTbmYNTrfnNTATmvQ-UVe-OGWWjV6Qqg/exec'>
+            <div className="text">Contact Me</div>
+            <form className=" gform" method='post' action='https://script.google.com/macros/s/AKfycbzhm62YZwBZvvoM_0wOKJb46GdPCQRhytZ0jzifKaxc3C0vDelgsRzCUwHxfdbCcAYAPw/exec'>
                 <div className="input-row">
                     <div className="input-data">
                         <input id="first" type="text" name="firstname" required placeholder=" "/>
@@ -44,7 +50,11 @@ const Contact = () => {
                         <input className="submit-btn" type="submit" value="Submit" />
                     </div>
                 </div>
+                <div style={{display:"none"}} className="thankyou_message">
+                    <h2>Thanks for you submission! I will reach out to you soon.</h2>
+                </div>
             </form>
+          
         </section>
     )
 }

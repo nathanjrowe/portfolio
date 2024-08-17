@@ -3,25 +3,26 @@ export const isMobileDevice = () => (typeof window.orientation !== "undefined") 
 export const autoPlay = (videos, container) => {
     if (isMobileDevice()) {
         const observer = new IntersectionObserver((entries) => {
-          entries.forEach(function(entry) {
+          entries.forEach(debounce((entry) => {
             if (entry.isIntersecting) {
-              entry.target.play();
+              playVideo(entry.target);
             } else {
               entry.target.pause();
             }
-          });
-        });
+          }, 200));
+        }, { threshold: 0.7 });
     
         videos.forEach((video) => observer.observe(video));
     } else {
         videos.forEach((video) => {
-          video.closest(container).addEventListener('mouseenter', () => {
+          const containerElement = video.closest(container);
+          containerElement.addEventListener('mouseenter', debounce(() => {
             requestAnimationFrame(() => playVideo(video));
-          });
+          }, 200));
     
-          video.closest(container).addEventListener('mouseleave', () => {
+          containerElement.addEventListener('mouseleave', debounce(() => {
             requestAnimationFrame(() => video.pause());
-          });
+          }, 200));
         });
       }
 }
@@ -33,3 +34,11 @@ const playVideo = async (video) => {
       console.log(`Error Playing Video: ${err}`);
     }
   }
+
+const debounce = (func, wait) => {
+    let timeout;
+    return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+};

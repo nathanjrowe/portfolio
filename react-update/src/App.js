@@ -87,12 +87,12 @@ function App() {
         <motion.div id="logo">
           <motion.img  src="./initial.svg" alt="logo"
             variants={variants}
-            initial={{y: window.innerHeight / 2, scale: 2}}
+            initial={{y: window.innerHeight / 2, scale: 3}}
             animate="load"
           />
           <motion.img  className="background" src="./circle.svg" alt="logo"
             variants={variants}
-            initial={{y: window.innerHeight / 2, scale: 2}}
+            initial={{y: window.innerHeight / 2, scale: 3}}
             animate={["rotate", "load"]}
           />
         </motion.div>

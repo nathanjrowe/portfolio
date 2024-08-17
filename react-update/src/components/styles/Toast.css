@@ -3,20 +3,21 @@
     text-wrap: nowrap;
     top: 0;
     right: 0;
-    color: #fff;
+    color: #F8EDE3;
     z-index: 999;
     word-break: normal !important;
 }
 
 .Toast .contact-toast {
     position:fixed;
-    background-color: #fff;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
+    background-color:  rgb(107, 36, 12);
     padding: 10px;
     border-radius: 5px;
     width: 80% !important;
+}
+
+#contact-toast {
+    background-color: #F8EDE3;
 }
 
 .Toastify__toast-body > div:last-child {
