@@ -3,7 +3,7 @@
         {
             "id": 1,
             "name": "Haiku Finder",
-            "description": "Uses JS to try and create a haiku from user inputted text.",
+            "description": "A small website that uses the Syllable API to generate a haiku from user input. JavaScript is used to split the inputted text into sentences, which then filters into sentences with five and seven syllables. A random index is chosen from these two arrays to display a haiku to the use. Created to learn how to use APIs in web development.",
             "status": "June 2024",
             "thumbnail": {
                 "url": "https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/haiku-thumbnail.png",
@@ -15,11 +15,11 @@
         {
             "id": 2,
             "name": "3D Traffic Simulator",
-            "description": "A 3D-rendered simulation of traffic light control of a small section of a city grid using the JavaFX library that I helped co-develop.",
+            "description": "A 3D-rendered simulation of traffic light control system that I helped co-develop. The team-developed project includes documentation about how the traffic light controller works and the requirements needed to create the simulation. Learned more about working under a waterfall software development model and how to use JavaFX to create a 3D simulation.",
             "status": "March-April 2024",
             "thumbnail": {
-                "url": "",
-                "type": "",
+                "url": "https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/videos/TrafficLight-2024-04-29-op.mp4",
+                "type": "video",
                 "alt": "Traffic Light Simulator Thumbnail"
             },
             "url": "https://github.com/nathanjrowe/traffic-light-sim"
@@ -39,7 +39,7 @@
         {
             "id": 4,
             "name": "Endless Centipede - Live Game Practice",
-            "description": "A game I made in Java using JavaFX. It is a clone of the classic arcade game Centipede.",
+            "description": "A clone of the classic game Centipede using JavaFX. Learned about live animations and efficient collision detection.",
             "status": "October 2023",
             "thumbnail": {
                 "url": "https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/videos/Centipede-2023-11-21-op.mp4",
@@ -51,7 +51,7 @@
         {
             "id": 5,
             "name": "Hexapawn - Reinforced Learning",
-            "description": "Made with Java and JavaFX. Uses Reinforced Learning to eventually play a perfect game.",
+            "description": "A checkers-like game made with JavaFX. A reinforcement learning algorithm is used to train the AI to play the game.",
             "status": "September 2023",
             "thumbnail": {
                 "url": "https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/videos/HER-op.mp4",
@@ -63,7 +63,7 @@
         {
             "id": 6,
             "name": "Multiplication Circle - JavaFX Animation",
-            "description": "A simple animation made with Java and JavaFX. Visualizes multiplication patterns given user input.",
+            "description": "A visualization of the multiplication table using JavaFX. The program renders dots in a fixed-radius circle and uses an multiplication to connect two dots with a line. Learned about creating animations and how to use JavaFX.",
             "status": "August 2023",
             "thumbnail": {
                 "url": "https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/videos/mult-circle-op.mp4",
