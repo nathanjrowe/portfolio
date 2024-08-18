@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import './styles/NavBar.css';
-import { Link, NavLink } from 'react-router-dom';
+
 
 function NavBar({ json }) {
+  // Add a useEffect hook to handle the mobile menu
   useEffect(() => {
     const handleMobileMenu = () => {
       const burger = document.querySelector('.burger');
       const nav = document.querySelector('.nav-menu');
       const navLinks = document.querySelectorAll('.nav-menu li a');
       const toggleMenu = () => {
-        //console.log("Before toggle:", burger.classList, nav.classList);
         burger.classList.toggle("active");
         nav.classList.toggle("active");
-        //console.log("After toggle:", burger.classList, nav.classList);
       };
 
       burger.addEventListener("click", toggleMenu);
@@ -27,6 +27,8 @@ function NavBar({ json }) {
     const cleanup = handleMobileMenu();
     return cleanup;
   }, []);
+
+  // NavBar items
   const data = JSON.parse(json);
 
   return (

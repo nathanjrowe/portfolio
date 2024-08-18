@@ -1,13 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
+/* Components */
 import Card from "./components/Card";
 import Timeline from "./components/Timeline";
 import Banner from "./components/Banner";
 import StickyButton from "./components/StickyButton";
-import { motion } from "framer-motion";
+import GoToTop from "./components/GoToTop";
+
 
 const Resume = ({ json }) => {
-
-
     return (
         <div className="resume center-items">
             <StickyButton className="link-button" href="/data/rowe_n_resume.pdf" download="rowe_nathan_resume.pdf" target="_blank">Download Resume as PDF</StickyButton>
@@ -31,6 +32,7 @@ const Resume = ({ json }) => {
                         </Timeline>
                     </section>
                 ))}
+                <GoToTop />
         </div>
     );
 };

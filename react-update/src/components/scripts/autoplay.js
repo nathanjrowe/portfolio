@@ -1,6 +1,12 @@
 export const isMobileDevice = () => (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 
+/**
+ * 
+ * @param {HTMLVideoElement[]} videos - The video elements to autoplay
+ * @param {string} container - The container class that holds the video 
+ */
 export const autoPlay = (videos, container) => {
+    //If the device is mobile, use IntersectionObserver to autoplay videos when they are in view
     if (isMobileDevice()) {
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(debounce((entry) => {
@@ -27,6 +33,10 @@ export const autoPlay = (videos, container) => {
       }
 }
 
+/**
+ *  
+ * @param {HTMLVideoElement} video - The video element to play
+ */
 const playVideo = async (video) => {
     try {
       await video.play();

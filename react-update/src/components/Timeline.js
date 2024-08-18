@@ -56,13 +56,13 @@ const Timeline = ({ children }) => {
                 </linearGradient>
             </defs>
             <motion.circle
-            transform="translate(-73.504272,-76.653651)"
+                transform="translate(-73.504272,-76.653651)"
                 style={{ fill: 'url(#Gradient1)' }}
-            id="path1"
-            cx="80.369003"
-            cy="79.638382"
-            r="3.0447311"
-            className="indicator" 
+                id="path1"
+                cx="80.369003"
+                cy="79.638382"
+                r="3.0447311"
+                className="indicator" 
             />
             </motion.svg>
             <ul ref={ref}>

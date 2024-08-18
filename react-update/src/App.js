@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import './App.css';
 import NavBar from './components/NavBar';
 import Projects from './components/Projects';
@@ -16,6 +16,10 @@ const aboutPath = jsonPath + 'about.json';
 const resumePath = jsonPath + 'resume.json';
 
 function App() {
+
+  /*
+   * States to hold the JSON data for the header, projects, about, and resume sections
+  */
   const [headerData, setHeaderData] = useState(null);
   const [projectsData, setProjectsData] = useState(null);
   const [aboutData, setAboutData] = useState(null);
@@ -43,6 +47,7 @@ function App() {
       .catch(error => console.error('Error fetching about data:', error));
   }, []);
 
+  // Framer Motion Variants for the loading animation
   const variants = {
     load: {
       y: 0, 
@@ -56,6 +61,7 @@ function App() {
   }
 
 
+  //Object to send to Home component
   const homeObject = {
     header: headerData, 
     about: aboutData,
@@ -101,7 +107,7 @@ function App() {
           <Route exact path="/" element={headerData && aboutData && projectsData && <Home json={homeObject} />} />
           <Route exact path="/projects" element={projectsData && <Projects json={projectsData} />} />
           <Route exact path="/contact" element={<Contact />} />
-          <Route exact path="/resume" element={<Resume json={resumeData}/>} />
+          <Route exact path="/resume" element={ resumeData && <Resume json={resumeData}/>} />
         </Routes>
         <Footer />
       </div>

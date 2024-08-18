@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
+import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import "./styles/Toast.css";
-import { ToastContainer, toast } from "react-toastify";
+
 
 const Toast = ({text, component}) => {
 

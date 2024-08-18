@@ -1,16 +1,29 @@
 .Banner {
-    width: 100%;
-    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+
+    width: 100%;
+    height: auto;
+    
     font-size: 1.8em;
 }
 
+
+/*
+*-----------------------------------------------------------
+*
+*                    PRESETS
+*
+*-----------------------------------------------------------
+*/
+
+/* Seperator */
+
 .seperator {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    position: relative;
+    
+
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -24,13 +37,20 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+
+            
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+
     font-size: 5vw;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     text-transform: uppercase;
-    position: relative;
-    color: #6B240C
+
+    color: #6B240C;
+    
 }
 
 .pop {
@@ -43,6 +63,10 @@
         -ms-flex-pack: center;
             justify-content: center;
 }
+
+
+
+/* Left and Right text with image boxes */
 
 .left-text-img {
     -webkit-box-orient: horizontal;
@@ -67,10 +91,12 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin-right: 10%;
+    
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+
+    margin-right: 10%;
 }
 
 .left-text-img p, .right-text-img p{
@@ -84,28 +110,40 @@
 }
 
 .cover .desc {
+    width: 60%;
+    padding: 30px;
+
+    font-size: 1.8vw;
     word-spacing: 4px;
     line-height: 1.5;
     letter-spacing: 2px;
-    width: 60%;
-    padding: 30px;
 }
 
 .cover .image {
+    float: left;
+
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
     width: 30%;
-    float: left;
+    
     margin: 5px;
 }
 
-@media screen and (max-width: 850px) {
+/*
+*-----------------------------------------------------------
+*
+*                    MOBILE
+*
+*-----------------------------------------------------------
+*/
+@media screen and (max-width: 799px) {
 
     .Banner {
         height: -webkit-fit-content;
         height: -moz-fit-content;
         height: fit-content;
+
         text-align: center;
     }
     .left-text-img, .right-text-img {
@@ -133,6 +171,7 @@
 
     .cover .desc {
         padding: 10px;
+
         font-size: 0.9em;
         word-spacing: 1px;
         line-height: 1.5;
@@ -141,6 +180,7 @@
     
     .cover .image {
         float:none;
+        
         width: 70% !important;
     }
 }

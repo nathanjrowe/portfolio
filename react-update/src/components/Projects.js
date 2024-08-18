@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from './Card';
 import Banner from './Banner';
-import './styles/Project.css';
 import { motion } from "framer-motion";
+import './styles/Project.css';
 
 const Projects = ({ json }) => {
     //Print each project in the json file

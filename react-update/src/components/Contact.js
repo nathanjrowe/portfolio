@@ -4,6 +4,7 @@ import './styles/Contact.css';
 
 const Contact = () => {
 
+    /*Adds AJAX to avoid page redirection on submit*/
     useEffect(() => {
         handleSubmit();
     }, []);

@@ -1,9 +1,7 @@
 .Frame {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    
-    
+    display: flex;  
     position: relative;
     overflow: visible;
     z-index: -1;
@@ -14,7 +12,7 @@
     height: 100%;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 768px) {
     .Frame {
         width: 30vh !important;
         -webkit-box-pack: center;
