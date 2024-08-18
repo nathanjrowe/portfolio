@@ -1,0 +1,42 @@
+{
+    "title": "Nathan Rowe",
+    "subtitle": "Web Developer",
+    "nav": [
+        {
+            "name": "Home",
+            "url": "/"
+        },
+        {
+            "name": "My Work",
+            "url": "/projects"
+        },
+        {
+            "name": "Resume",
+            "url": "/resume"
+        },
+        {
+            "name": "Contact",
+            "url": "/contact"
+        }
+        
+    ], 
+    "social": [
+        {
+            "name": "Facebook",
+            "url": "https://www.facebook.com"
+        },
+        {
+            "name": "Twitter",
+            "url": "https://www.twitter.com"
+        },
+        {
+            "name": "Instagram",
+            "url": "https://www.instagram.com"
+        }
+    ],
+    "contact": {
+        "email": "naterowe2002@gmail.com",
+        "phone": "505-573-5160"
+    }
+    
+}

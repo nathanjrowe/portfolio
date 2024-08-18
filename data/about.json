@@ -1,0 +1,8 @@
+{
+    "sections": [
+        {
+            "description": "Welcome! I'm Nathan, a learning web developer with a passion for user interaction. I have been studying Computer Science at the University of New Mexico since 2022 and am pursuing a certification in Full Stack Development on my off time. I also spend time volunteering in the community and help mentor in a local youth group. I am always looking for new opportunities to learn and grow as a developer, so please <span class='contact-toast' style={opacity: 0}>reach out</span> if you would like to work together and make something great!",
+            "image": "https://myportfoliobucketnater.s3.us-east-2.amazonaws.com/images/design-1.png"
+        }
+    ]
+}
