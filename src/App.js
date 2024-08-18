@@ -9,7 +9,7 @@ import Home from './Home';
 import Resume from './Resume';
 import Footer from './components/Footer';
 
-const jsonPath = '/data/';
+const jsonPath = process.env.PUBLIC_URL + '/data/';
 const headerPath = jsonPath + 'header.json';
 const projectsPath = jsonPath + 'projects.json';
 const aboutPath = jsonPath + 'about.json';
@@ -29,7 +29,7 @@ function App() {
     fetch(projectsPath)
       .then(response => response.json())
       .then(data => setProjectsData(data))
-      .catch(error => console.error('Error fetching projects data:', error));
+      .catch(error => console.error(`Error fetching projects data: ${error}, ${projectsPath}`));
 
       fetch(headerPath)
       .then(response => response.json())
@@ -104,9 +104,9 @@ function App() {
         {headerData && <NavBar json={headerData}/>}
         <Routes>
           <Route exact path="/" element={headerData && aboutData && projectsData && <Home json={homeObject} />} />
-          <Route exact path="/projects" element={projectsData && <Projects json={projectsData} />} />
-          <Route exact path="/contact" element={<Contact />} />
-          <Route exact path="/resume" element={ resumeData && <Resume json={resumeData}/>} />
+          <Route path="/projects" element={projectsData && <Projects json={projectsData} />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/resume" element={ resumeData && <Resume json={resumeData}/>} />
         </Routes>
         <Footer />
       </div>

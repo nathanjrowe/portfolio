@@ -11,7 +11,7 @@ import GoToTop from "./components/GoToTop";
 const Resume = ({ json }) => {
     return (
         <div className="resume center-items">
-            <StickyButton className="link-button" href="/data/rowe_n_resume.pdf" download="rowe_nathan_resume.pdf" target="_blank">Download Resume as PDF</StickyButton>
+            <StickyButton className="link-button" href={process.env.PUBLIC_URL + "/data/rowe_n_resume.pdf"} download="rowe_nathan_resume.pdf" target="_blank">Download Resume as PDF</StickyButton>
             {json &&
                 Object.keys(json).map(key => (
                     <section id={key} key={key} style={{ width: "100%"}}>
