@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {Router, Routes, Route } from 'react-router-dom';
 import { motion } from "framer-motion";
 import './App.css';
 import NavBar from './components/NavBar';
