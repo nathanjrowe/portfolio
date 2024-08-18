@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Router, Routes, Route } from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import { motion } from "framer-motion";
 import './App.css';
 import NavBar from './components/NavBar';
@@ -69,7 +69,6 @@ function App() {
   };
 
   return (
-    <Router>
       <div className="App" >
         <motion.div id="cover"
           initial={{
@@ -111,7 +110,6 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </Router>
   );
 }
 
